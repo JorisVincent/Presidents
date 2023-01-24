@@ -4,16 +4,19 @@ import json
 presidents = []
 
 #1.1 filter for US Presidents
-with open("People/A_people.json", 'r') as file:
-    A_people= json.load(file)
-
-for person in A_people:
-    # Note: orderInOffice may not always be a list
-    is_us_president = False
-    if "ontology/orderInOffice" in person:
-        for label in person["ontology/orderInOffice"]:
-            if "President of the United States" in label:
-                is_us_president = True
+def filter(letter):
+    with open(f'People/{letter}_people.json', 'r') as file:
+        people = json.load(file)
+        for person in people:
+            # Note: orderInOffice may not always be a list
+            is_us_president = False
+            if "ontology/orderInOffice" in person:
+                for label in person["ontology/orderInOffice"]:
+                    if "President of the United States" in label:
+                        is_us_president = True
+            if is_us_president:
+                presidents.append(person)
+                print(person["title"])
 
     # is_born_after_1855 = False
     # if "ontology/birthYear" in person:
@@ -24,10 +27,7 @@ for person in A_people:
     #     if year > 1855:
     #         is_born_after_1855 = True
     
-    
-    if is_us_president:
-        presidents.append(person)
-        print(person["title"])
+
         
 # with open("People/B_people.json", 'r') as file:
 #     B_people= json.load(file)
@@ -39,4 +39,7 @@ for person in A_people:
 #             if "President of the United States" in label:
 #                 print(person["title"])
 #                 presidents.append(person)
+
+for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+    filter(letter)
 
