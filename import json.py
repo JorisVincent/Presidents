@@ -43,3 +43,7 @@ def filter(letter):
 for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
     filter(letter)
 
+presidentstr = json.dumps(presidents)
+
+with open('presidents.json', 'w', encoding='utf-8') as file:
+    file.write(presidentstr)
