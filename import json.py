@@ -93,11 +93,11 @@ def filter(letter):
             if "title" in person:
                 if "Ed_Kealty" in person["title"]:
                     is_bs = True
-                if "_of_" in person["title"]:
+                if "of" in person["title"]:
                     is_bs = True
                 if "presidential" in person["title"]:
                     is_bs = True
-                if "_and_" in person["title"]:
+                if "and" in person["title"]:
                     is_bs = True
                 if "controversy" in person["title"]:
                     is_bs = True
@@ -107,7 +107,15 @@ def filter(letter):
                     is_bs = True
                 if "Morgan_Mason" in person["title"]:
                     is_bs = True
-            if is_president and is_american and not is_coloumbian and not is_bs:
+            #Check if carter or obama
+            no_edu = False
+                #Check in title
+            if "title" in person:
+                if "Obama" in person["title"]:
+                    no_edu = True
+                if "Carter" in person["title"]:
+                    no_edu = True
+            if is_president and is_american and not is_coloumbian and not is_bs and not no_edu:
                 presidents.append(person)
                 print(person["title"])
 
@@ -164,14 +172,12 @@ with open('president_alma_maters.csv', 'w', encoding='utf-8') as file:
                 if "Independent politician" in president["ontology/party"]:
                     first_party= "Independent"
         
-        ''' 
         first_university = None
         if "ontology/almaMater_label" in president:
             if type(president["ontology/almaMater_label"]) is list:
                 first_university = president["ontology/almaMater_label"][0]
             else:
                 first_university = president["ontology/almaMater_label"]
-        '''
 
         universities = []
         if "ontology/almaMater_label" in president:
@@ -179,6 +185,8 @@ with open('president_alma_maters.csv', 'w', encoding='utf-8') as file:
                 universities = president["ontology/almaMater_label"]
             else:
                 universities = [president["ontology/almaMater_label"]]
+        else:
+            universities = "X"
 
         for university in universities:
             file.write(f'{university}, {president["title"]}, {first_party}\n')
