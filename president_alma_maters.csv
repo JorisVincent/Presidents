@@ -1,23 +1,23 @@
 education, president, party_label
-None, Andrew_Jackson, Democrat
-None, Andrew_Johnson, Democrat
-None, Abraham_Lincoln, Republican
-None, Barack_Obama, Democrat
 Miami University, Benjamin_Harrison, Republican
 University College Oxford, Bill_Clinton, Democrat
+Yale Law School, Bill_Clinton, Democrat
+Edmund A. Walsh School of Foreign Service, Bill_Clinton, Democrat
 Union College, Chester_A._Arthur, Republican
+State and National Law School, Chester_A._Arthur, Republican
 Amherst College, Calvin_Coolidge, Republican
 United States Military Academy, Dwight_D._Eisenhower, Republican
 Harvard College, Franklin_D._Roosevelt, Democrat
+Columbia Law School, Franklin_D._Roosevelt, Democrat
 Bowdoin College, Franklin_Pierce, Democrat
+Northampton Law School, Franklin_Pierce, Democrat
 Yale University, George_H._W._Bush, Republican
 Harvard Business School, George_W._Bush, Republican
-None, George_Washington, None
+Yale College, George_W._Bush, Republican
 University of Michigan, Gerald_Ford, Republican
-None, Grover_Cleveland, Democrat
-None, Harry_S._Truman, Democrat
+Yale Law School, Gerald_Ford, Republican
 Stanford University, Herbert_Hoover, Republican
-None, Jimmy_Carter, Democrat
+George Fox University, Herbert_Hoover, Republican
 Harvard College, John_Adams, Federalist Party
 Princeton University, James_Madison, Democratic-Republican
 College of William & Mary, James_Monroe, Democratic-Republican
@@ -25,20 +25,28 @@ Harvard University, John_F._Kennedy, Democrat
 Harvard College, John_Quincy_Adams, Whig
 College of William & Mary, John_Tyler, Independent politician
 Williams College, James_A._Garfield, Republican
+Hiram College, James_A._Garfield, Republican
 Dickinson College, James_Buchanan, Democrat
 University of North Carolina at Chapel Hill, James_K._Polk, Democrat
 Texas State University, Lyndon_B._Johnson, Democrat
-None, Martin_Van_Buren, Democratic-Republican
-None, Millard_Fillmore, Know Nothing
 Eureka College, Ronald_Reagan, Republican
 Kenyon College, Rutherford_B._Hayes, Republican
+Harvard Law School, Rutherford_B._Hayes, Republican
 Duke University, Richard_Nixon, Republican
+Whittier College, Richard_Nixon, Republican
 Harvard College, Theodore_Roosevelt, Republican
+Columbia Law School, Theodore_Roosevelt, Republican
 College of William & Mary, Thomas_Jefferson, Democratic-Republican
 United States Military Academy, Ulysses_S._Grant, Republican
 Ohio Central College, Warren_G._Harding, Republican
 University of Pennsylvania, William_Henry_Harrison, Whig
+Hampden–Sydney College, William_Henry_Harrison, Whig
 University of Cincinnati College of Law, William_Howard_Taft, Republican
+Yale College, William_Howard_Taft, Republican
 Allegheny College, William_McKinley, Republican
+University of Mount Union, William_McKinley, Republican
+Albany Law School, William_McKinley, Republican
 Princeton University, Woodrow_Wilson, Democrat
-None, Zachary_Taylor, Whig
+Johns Hopkins University, Woodrow_Wilson, Democrat
+Davidson College, Woodrow_Wilson, Democrat
+University of Virginia School of Law, Woodrow_Wilson, Democrat

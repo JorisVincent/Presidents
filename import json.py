@@ -117,19 +117,68 @@ for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
 with open('presidents.json', 'w', encoding='utf-8') as file:
     json.dump(presidents, file)
 
-with open('presidents.csv', 'w', encoding='utf-8') as file:
+with open('president_alma_maters.csv', 'w', encoding='utf-8') as file:
    file.write(f'education, president, party_label\n')
    for president in presidents:
-       first_university = None
-       first_party= None
-       if "ontology/almaMater_label" in president:
+        first_party = None
+        if "ontology/party_label" in president:
+            if type(president["ontology/party_label"]) is list:
+                first_party = president["ontology/party"][0]
+                if "http://dbpedia.org/resource/Democratic_Party_(United_States)" in first_party:
+                    first_party= "Democrat"
+                if "Democratic Party (United States)" in first_party:
+                    first_party= "Democrat"
+                if "http://dbpedia.org/resource/Republican_Party_(United_States)" in first_party:
+                    first_party= "Republican"
+                if "Republican Party (United States)" in first_party:
+                    first_party= "Republican"
+                if "http://dbpedia.org/resource/Democratic-Republican_Party" in first_party:
+                    first_party= "Democratic-Republican"
+                if "Democratic Party (United States)" in first_party:
+                    first_party= "Democratic-Republican"
+                if "http://dbpedia.org/resource/Whig_Party_(United_States)" in first_party:
+                    first_party= "Whig"
+                if "Whig Party (United States)" in first_party:
+                    first_party= "Whig"
+
+            else:
+                first_party = president["ontology/party_label"]
+                if "http://dbpedia.org/resource/Democratic_Party_(United_States)" in president["ontology/party"]:
+                    first_party= "Democrat"
+                if "Democratic Party (United States)" in president["ontology/party"]:
+                    first_party= "Democrat"
+                if "http://dbpedia.org/resource/Republican_Party_(United_States)" in president["ontology/party"]:
+                    first_party= "Republican"
+                if "Republican Party (United States)" in president["ontology/party"]:
+                    first_party= "Republican"
+                if "http://dbpedia.org/resource/Democratic-Republican_Party" in president["ontology/party"]:
+                    first_party= "Democratic-Republican"
+                if "Democratic Party (United States)" in president["ontology/party"]:
+                    first_party= "Democratic-Republican"
+                if "http://dbpedia.org/resource/Whig_Party_(United_States)" in president["ontology/party"]:
+                    first_party= "Whig"
+                if "Whig Party (United States)" in president["ontology/party"]:
+                    first_party= "Whig"
+                if "Federalist Party" in president["ontology/party"]:
+                    first_party= "Federalist"
+                if "Independent politician" in president["ontology/party"]:
+                    first_party= "Independent"
+        
+        ''' 
+        first_university = None
+        if "ontology/almaMater_label" in president:
             if type(president["ontology/almaMater_label"]) is list:
                 first_university = president["ontology/almaMater_label"][0]
             else:
                 first_university = president["ontology/almaMater_label"]
-       if "ontology/party_label" in president:
-            if type(president["ontology/party_label"]) is list:
-                first_party = president["ontology/party"][0]
+        '''
+
+        universities = []
+        if "ontology/almaMater_label" in president:
+            if type(president["ontology/almaMater_label"]) is list:
+                universities = president["ontology/almaMater_label"]
             else:
-                first_party = president["ontology/party_label"]
-       file.write(f'{first_university}, {president["title"]}, {first_party}\n')
+                universities = [president["ontology/almaMater_label"]]
+
+        for university in universities:
+            file.write(f'{university}, {president["title"]}, {first_party}\n')
