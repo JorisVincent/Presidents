@@ -105,6 +105,8 @@ def filter(letter):
                     is_bs = True
                 if "Santos" in person["title"]:
                     is_bs = True
+                if "Morgan_Mason" in person["title"]:
+                    is_bs = True
             if is_president and is_american and not is_coloumbian and not is_bs:
                 presidents.append(person)
                 print(person["title"])
@@ -116,7 +118,7 @@ with open('presidents.json', 'w', encoding='utf-8') as file:
     json.dump(presidents, file)
 
 with open('presidents.csv', 'w', encoding='utf-8') as file:
-   file.write(f'president, education, party_label\n')
+   file.write(f'education, president, party_label\n')
    for president in presidents:
        first_university = None
        first_party= None
