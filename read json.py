@@ -5,3 +5,4 @@ with open("presidents.json", 'r') as file:
 
 for entry in presidents:
     print(entry["title"])
+print(len(entry))
