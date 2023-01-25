@@ -101,7 +101,10 @@ def filter(letter):
                     is_bs = True
                 if "controversy" in person["title"]:
                     is_bs = True
-
+                if "Sunil" in person["title"]:
+                    is_bs = True
+                if "Santos" in person["title"]:
+                    is_bs = True
             if is_president and is_american and not is_coloumbian and not is_bs:
                 presidents.append(person)
                 print(person["title"])
@@ -113,6 +116,18 @@ with open('presidents.json', 'w', encoding='utf-8') as file:
     json.dump(presidents, file)
 
 with open('presidents.csv', 'w', encoding='utf-8') as file:
-   file.write(f'president, inauguration_date, birth_date\n')
+   file.write(f'president, education, party_label\n')
    for president in presidents:
-       file.write(f'{president["title"]}, {president.get("ontology/activeYearsStartDate")}, {president.get("ontology/birthDate")}\n')
+       first_university = None
+       first_party= None
+       if "ontology/almaMater_label" in president:
+            if type(president["ontology/almaMater_label"]) is list:
+                first_university = president["ontology/almaMater_label"][0]
+            else:
+                first_university = president["ontology/almaMater_label"]
+       if "ontology/party_label" in president:
+            if type(president["ontology/party_label"]) is list:
+                first_party = president["ontology/party"][0]
+            else:
+                first_party = president["ontology/party_label"]
+       file.write(f'{first_university}, {president["title"]}, {first_party}\n')

@@ -1,47 +1,45 @@
-president, inauguration_date, birth_date
-Andrew_Jackson, None, 1767-03-15
-Andrew_Johnson, None, 1808-12-29
-Abraham_Lincoln, None, 1809-02-12
-Barack_Obama, None, 1961-08-04
-Benjamin_Harrison, None, 1833-08-20
-Bill_Clinton, ['1977-01-03', '1979-01-09', '1983-01-11', '1993-01-20'], 1946-08-19
-Chester_A._Arthur, None, 1829-10-05
-Calvin_Coolidge, None, 1872-07-04
-Dwight_D._Eisenhower, None, 1890-10-14
-Franklin_D._Roosevelt, None, 1882-01-30
-Franklin_Pierce, None, 1804-11-23
-George_H._W._Bush, None, 1924-06-12
-George_W._Bush, None, 1946-07-06
-George_Washington, None, 1732-02-22
-Gerald_Ford, None, 1913-07-14
-Grover_Cleveland, None, 1837-03-18
-Harry_S._Truman, None, 1884-05-08
-Herbert_Hoover, None, 1874-08-10
-Jimmy_Carter, None, 1924-10-01
-John_Adams, None, 1735-10-30
-James_Madison, None, 1751-03-16
-James_Monroe, None, 1758-04-28
-John_F._Kennedy, None, 1917-05-29
-John_Quincy_Adams, None, 1767-07-11
-John_Tyler, None, 1790-03-29
-James_A._Garfield, None, 1831-11-19
-James_Buchanan, None, 1791-04-23
-James_K._Polk, None, 1795-11-02
-Lyndon_B._Johnson, None, 1908-08-27
-Martin_Van_Buren, None, 1782-12-05
-Millard_Fillmore, None, 1800-01-07
-Morgan_Mason, None, 1955-06-26
-Ronald_Reagan, None, 1911-02-06
-Rutherford_B._Hayes, None, 1822-10-04
-Richard_Nixon, None, 1913-01-09
-Santos_Gutiérrez, ['1863-02-09', '1864-01-01', '1868-04-01'], 1820-10-24
-Sunil_Gulati, None, 1959-07-30
-Theodore_Roosevelt, None, 1858-10-27
-Thomas_Jefferson, None, 1743-04-13
-Ulysses_S._Grant, None, 1822-04-27
-Warren_G._Harding, ['1904-01-11', '1915-03-04', '1921-03-04'], 1865-11-02
-William_Henry_Harrison, None, 1773-02-09
-William_Howard_Taft, None, 1857-09-15
-William_McKinley, None, 1843-01-29
-Woodrow_Wilson, None, 1856-12-28
-Zachary_Taylor, None, 1784-11-24
+president, education, party_label
+None, Andrew_Jackson, Democratic Party (United States)
+None, Andrew_Johnson, Democratic Party (United States)
+None, Abraham_Lincoln, http://dbpedia.org/resource/Republican_Party_(United_States)
+None, Barack_Obama, Democratic Party (United States)
+Miami University, Benjamin_Harrison, Republican Party (United States)
+University College Oxford, Bill_Clinton, Democratic Party (United States)
+Union College, Chester_A._Arthur, Republican Party (United States)
+Amherst College, Calvin_Coolidge, Republican Party (United States)
+United States Military Academy, Dwight_D._Eisenhower, Republican Party (United States)
+Harvard College, Franklin_D._Roosevelt, Democratic Party (United States)
+Bowdoin College, Franklin_Pierce, Democratic Party (United States)
+Yale University, George_H._W._Bush, Republican Party (United States)
+Harvard Business School, George_W._Bush, Republican Party (United States)
+None, George_Washington, None
+University of Michigan, Gerald_Ford, Republican Party (United States)
+None, Grover_Cleveland, Democratic Party (United States)
+None, Harry_S._Truman, Democratic Party (United States)
+Stanford University, Herbert_Hoover, Republican Party (United States)
+None, Jimmy_Carter, Democratic Party (United States)
+Harvard College, John_Adams, Federalist Party
+Princeton University, James_Madison, Democratic-Republican Party
+College of William & Mary, James_Monroe, Democratic-Republican Party
+Harvard University, John_F._Kennedy, Democratic Party (United States)
+Harvard College, John_Quincy_Adams, http://dbpedia.org/resource/Whig_Party_(United_States)
+College of William & Mary, John_Tyler, Independent politician
+Williams College, James_A._Garfield, Republican Party (United States)
+Dickinson College, James_Buchanan, Democratic Party (United States)
+University of North Carolina at Chapel Hill, James_K._Polk, Democratic Party (United States)
+Texas State University, Lyndon_B._Johnson, Democratic Party (United States)
+None, Martin_Van_Buren, http://dbpedia.org/resource/Democratic-Republican_Party
+None, Millard_Fillmore, Know Nothing
+None, Morgan_Mason, None
+Eureka College, Ronald_Reagan, Republican Party (United States)
+Kenyon College, Rutherford_B._Hayes, Republican Party (United States)
+Duke University, Richard_Nixon, Republican Party (United States)
+Harvard College, Theodore_Roosevelt, http://dbpedia.org/resource/Republican_Party_(United_States)
+College of William & Mary, Thomas_Jefferson, Democratic-Republican Party
+United States Military Academy, Ulysses_S._Grant, http://dbpedia.org/resource/Republican_Party_(United_States)
+Ohio Central College, Warren_G._Harding, Republican Party (United States)
+University of Pennsylvania, William_Henry_Harrison, Whig Party (United States)
+University of Cincinnati College of Law, William_Howard_Taft, Republican Party (United States)
+Allegheny College, William_McKinley, Republican Party (United States)
+Princeton University, Woodrow_Wilson, Democratic Party (United States)
+None, Zachary_Taylor, Whig Party (United States)
