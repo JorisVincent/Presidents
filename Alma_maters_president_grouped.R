@@ -6,8 +6,8 @@ uni_data <- read_csv("president_alma_maters.csv")
 
 # Cleaning
 uni_data <- uni_data |>
-  mutate(education = if_else(startsWith(education,"Harvard"),"Harvard",education)) |>
-  mutate(education = if_else(startsWith(education,"Yale"),"Yale",education)) |>
+  mutate(education = if_else(startsWith(education,"Harvard"),"Harvard University",education)) |>
+  mutate(education = if_else(startsWith(education,"Yale"),"Yale University",education)) |>
   mutate(education = if_else(startsWith(education,"Harvard"),"Harvard",education)) |>
   mutate(education = if_else(startsWith(education,"Edmund"),"Walsh School of Foreign Service",education)) |>
   mutate(education = if_else(startsWith(education,"University of North Carolina"),"University of North Carolina",education)) |>
@@ -37,6 +37,6 @@ barred_data |>
   geom_col() +
   theme_light()+
   scale_fill_manual(values=mycolors)  +
-  xlab("Institution") +
-  ylab("#of Presidents") +
-  ggtitle("Institutions attended by U.S. President")
+  xlab("Tertiary Educational Institute") +
+  ylab("Number of Presidents") +
+  ggtitle("Institutions Attended by U.S. Presidents")

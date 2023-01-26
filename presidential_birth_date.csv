@@ -1,20 +1,28 @@
 education, president, birth_date
-None, Andrew_Jackson, 1767-03-15
-None, Andrew_Johnson, 1808-12-29
-None, Abraham_Lincoln, 1809-02-12
+X, Andrew_Jackson, 1767-03-15
+X, Andrew_Johnson, 1808-12-29
+X, Abraham_Lincoln, 1809-02-12
 Miami University, Benjamin_Harrison, 1833-08-20
 University College Oxford, Bill_Clinton, 1946-08-19
+Yale Law School, Bill_Clinton, 1946-08-19
+Edmund A. Walsh School of Foreign Service, Bill_Clinton, 1946-08-19
 Union College, Chester_A._Arthur, 1829-10-05
+State and National Law School, Chester_A._Arthur, 1829-10-05
 Amherst College, Calvin_Coolidge, 1872-07-04
 United States Military Academy, Dwight_D._Eisenhower, 1890-10-14
 Harvard College, Franklin_D._Roosevelt, 1882-01-30
+Columbia Law School, Franklin_D._Roosevelt, 1882-01-30
 Bowdoin College, Franklin_Pierce, 1804-11-23
+Northampton Law School, Franklin_Pierce, 1804-11-23
 Yale University, George_H._W._Bush, 1924-06-12
 Harvard Business School, George_W._Bush, 1946-07-06
-None, George_Washington, 1732-02-22
+Yale College, George_W._Bush, 1946-07-06
+X, George_Washington, 1732-02-22
 University of Michigan, Gerald_Ford, 1913-07-14
-None, Harry_S._Truman, 1884-05-08
+Yale Law School, Gerald_Ford, 1913-07-14
+X, Harry_S._Truman, 1884-05-08
 Stanford University, Herbert_Hoover, 1874-08-10
+George Fox University, Herbert_Hoover, 1874-08-10
 Harvard College, John_Adams, 1735-10-30
 Princeton University, James_Madison, 1751-03-16
 College of William & Mary, James_Monroe, 1758-04-28
@@ -22,20 +30,31 @@ Harvard University, John_F._Kennedy, 1917-05-29
 Harvard College, John_Quincy_Adams, 1767-07-11
 College of William & Mary, John_Tyler, 1790-03-29
 Williams College, James_A._Garfield, 1831-11-19
+Hiram College, James_A._Garfield, 1831-11-19
 Dickinson College, James_Buchanan, 1791-04-23
 University of North Carolina at Chapel Hill, James_K._Polk, 1795-11-02
 Texas State University, Lyndon_B._Johnson, 1908-08-27
-None, Martin_Van_Buren, 1782-12-05
-None, Millard_Fillmore, 1800-01-07
+X, Martin_Van_Buren, 1782-12-05
+X, Millard_Fillmore, 1800-01-07
 Eureka College, Ronald_Reagan, 1911-02-06
 Kenyon College, Rutherford_B._Hayes, 1822-10-04
+Harvard Law School, Rutherford_B._Hayes, 1822-10-04
 Duke University, Richard_Nixon, 1913-01-09
+Whittier College, Richard_Nixon, 1913-01-09
 Harvard College, Theodore_Roosevelt, 1858-10-27
+Columbia Law School, Theodore_Roosevelt, 1858-10-27
 College of William & Mary, Thomas_Jefferson, 1743-04-13
 United States Military Academy, Ulysses_S._Grant, 1822-04-27
 Ohio Central College, Warren_G._Harding, 1865-11-02
 University of Pennsylvania, William_Henry_Harrison, 1773-02-09
+Hampden–Sydney College, William_Henry_Harrison, 1773-02-09
 University of Cincinnati College of Law, William_Howard_Taft, 1857-09-15
+Yale College, William_Howard_Taft, 1857-09-15
 Allegheny College, William_McKinley, 1843-01-29
+University of Mount Union, William_McKinley, 1843-01-29
+Albany Law School, William_McKinley, 1843-01-29
 Princeton University, Woodrow_Wilson, 1856-12-28
-None, Zachary_Taylor, 1784-11-24
+Johns Hopkins University, Woodrow_Wilson, 1856-12-28
+Davidson College, Woodrow_Wilson, 1856-12-28
+University of Virginia School of Law, Woodrow_Wilson, 1856-12-28
+X, Zachary_Taylor, 1784-11-24

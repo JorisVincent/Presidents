@@ -192,14 +192,17 @@ with open('president_alma_maters.csv', 'w', encoding='utf-8') as file:
             file.write(f'{university}, {president["title"]}, {first_party}\n')
 
 with open('presidential_birth_date.csv', 'w', encoding='utf-8') as file:
-   file.write(f'education, president, birth_date\n')
-   for president in presidents:
-        first_university = None
+    file.write(f'education, president, birth_date\n')
+    for president in presidents:
+        universities = []
         if "ontology/almaMater_label" in president:
             if type(president["ontology/almaMater_label"]) is list:
-                first_university = president["ontology/almaMater_label"][0]
+                    universities = president["ontology/almaMater_label"]
             else:
-                first_university = president["ontology/almaMater_label"]
+                    universities = [president["ontology/almaMater_label"]]
+        else:
+            universities = "X"
         if "ontology/birthDate" in president:
             birth_Date = president["ontology/birthDate"]
-        file.write(f'{first_university}, {president["title"]}, {birth_Date}\n')
+        for university in universities:
+            file.write(f'{university}, {president["title"]}, {birth_Date}\n')
