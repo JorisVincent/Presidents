@@ -25,8 +25,6 @@ uni_data <- uni_data |>
   mutate(party_label = if_else(startsWith(party_label,"None"),"Other",party_label)) |>
   group_by(party_label)
 
-
-
 # Bar graph
 barred_data <- uni_data  |>
   count(education)
