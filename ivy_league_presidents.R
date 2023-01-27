@@ -20,13 +20,10 @@ uni_data <- uni_data |>
   mutate(education = ifelse(education %in% c("Ivy League", "Without Tertiary Education"), education, "Not Ivy League"))
 
 uni_data |>
-  ggplot(aes(x = education, y = birth_date)) +
-  geom_jitter(width=.1)+
-#  geom_errorbarh(aes(xmin=education, xmax=education), size=10) +
-#  geom_point(alpha=0.5, colour='purple') +
-  coord_flip() +
-  #theme_light() +
-  xlab("") +
-  ylab("Year")
+  ggplot(aes(y = education, x = birth_date)) +
+  geom_point(shape = 125, size=15, alpha=0.5, colour='purple') + # shape=124 sets the points to be the pipe-symbol "|"
+  theme_light() +
+  ylab("") +
+  xlab("Year")
 ggsave("Violinplot_Presidents.pdf", width = 7, height = 4)
 
