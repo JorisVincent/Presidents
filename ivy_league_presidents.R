@@ -14,19 +14,19 @@ uni_data <- uni_data |>
   mutate(education = if_else(startsWith(education,"University of Virginia"),"University of Virginia",education)) |>
   mutate(education = if_else(startsWith(education,"Columbia University"),"Columbia",education)) |>
   mutate(education = if_else(startsWith(education,"Albany Law"),"University at Albany",education)) |>
-  mutate(education = if_else(startsWith(education,"X"),"No Tertiary Education",education)) |>
+  mutate(education = if_else(startsWith(education,"X"),"Without Tertiary Education",education)) |>
   mutate(education = if_else(startsWith(education,"Northampton"),"University of Northampton",education)) |>
   mutate(education = ifelse(education %in% c("Harvard University", "Yale University", "Princeton Univeristy", "University of Pennsylvania"),"Ivy League", education)) |>
-  mutate(education = ifelse(education %in% c("Ivy League", "No Tertiary Education"), education, "Not Ivy League"))
-
+  mutate(education = ifelse(education %in% c("Ivy League", "Without Tertiary Education"), education, "Not Ivy League"))
 
 uni_data |>
   ggplot(aes(x = education, y = birth_date)) +
-  geom_violin() +
-  geom_point() +
+  geom_jitter(width=.1)+
+#  geom_errorbarh(aes(xmin=education, xmax=education), size=10) +
+#  geom_point(alpha=0.5, colour='purple') +
   coord_flip() +
-  theme_light() +
-  xlab("Tertiary education") +
-  ylab("Year") +
-  ggtitle("Institutions Attended by U.S. Presidents")
+  #theme_light() +
+  xlab("") +
+  ylab("Year")
+ggsave("Violinplot_Presidents.pdf", width = 7, height = 4)
 

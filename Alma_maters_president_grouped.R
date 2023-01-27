@@ -8,12 +8,11 @@ uni_data <- read_csv("president_alma_maters.csv")
 uni_data <- uni_data |>
   mutate(education = if_else(startsWith(education,"Harvard"),"Harvard University",education)) |>
   mutate(education = if_else(startsWith(education,"Yale"),"Yale University",education)) |>
-  mutate(education = if_else(startsWith(education,"Harvard"),"Harvard",education)) |>
   mutate(education = if_else(startsWith(education,"Edmund"),"Walsh School of Foreign Service",education)) |>
   mutate(education = if_else(startsWith(education,"University of North Carolina"),"University of North Carolina",education)) |>
   mutate(education = if_else(startsWith(education,"University of Cincinnati"),"University of Cincinnati",education)) |>
   mutate(education = if_else(startsWith(education,"University of Virginia"),"University of Virginia",education)) |>
-  mutate(education = if_else(startsWith(education,"Columbia University"),"Columbia",education)) |>
+  mutate(education = if_else(startsWith(education,"Columbia"),"Columbia University",education)) |>
   mutate(education = if_else(startsWith(education,"Albany Law"),"University at Albany",education)) |>
   mutate(education = if_else(startsWith(education,"Northampton"),"University of Northampton",education)) |>
   mutate(education = if_else(startsWith(education,"X"),"No Tertiary Education",education)) |>
@@ -32,11 +31,15 @@ barred_data <- uni_data  |>
 mycolors <- c("Democrat"="#0000FF", "Other"="#808080", "Republican"="#FF0000")
 
 barred_data |>
-  ggplot(aes(x = education, y = n, fill = party_label)) +
+  group_by(education) |>
+  mutate(total_n = sum(n)) |>
+  ungroup() |>
+  ggplot(aes(x = reorder(education, total_n), y = n, fill = party_label)) +
   coord_flip() +
   geom_col() +
   theme_light()+
   scale_fill_manual(values=mycolors)  +
+  scale_y_continuous(breaks = c(0,1,2,3,4,5,6,7,8), minor_breaks=NULL) +
   xlab("Tertiary Educational Institute") +
-  ylab("Number of Presidents") +
-  ggtitle("Institutions Attended by U.S. Presidents")
+  ylab("Number of Presidents")
+ggsave("Barplot_Presidents.pdf", width = 7, height = 5)
